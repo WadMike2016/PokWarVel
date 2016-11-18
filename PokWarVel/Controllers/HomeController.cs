@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MarvelApi;
+using MarvelApi.Model;
+using PokWarVel.infra;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +11,30 @@ namespace PokWarVel.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string page="")
         {
-            return View();
+           
+            if(page=="")
+            {
+                SessionUtil.offsetGal = 0;
+            }
+            else
+            {
+                if(page=="prev" && SessionUtil.offsetGal>12)
+                {
+                    SessionUtil.offsetGal -= 12;
+                }
+                
+                if(page=="next")
+                {
+                    SessionUtil.offsetGal += 12;
+                }
+            }
+
+            MarvelRequester r = new MarvelRequester();
+            List<Characters> info = r.GetCharacters(limit: 12, offset: SessionUtil.offsetGal);
+
+            return View(info);
         }
 
         public ActionResult About()

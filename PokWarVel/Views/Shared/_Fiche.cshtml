@@ -1,0 +1,40 @@
+﻿@model MarvelApi.Model.Characters
+<div class="col-xs-6 col-sm-6 col-md-4">
+    <div class="Fiche">
+        <div class="portfolio-single head">
+            <div class="roundedImage" style="background:url(@Model.ptiAvatar) no-repeat 0px 0px;">
+                &nbsp;
+            </div>
+            <div class="portfolio-view">
+                <ul class="nav nav-pills">
+                    <li><a href="portfolio-details.html"><i class="fa fa-link"></i></a></li>
+                    <li><a href="images/portfolio/1.jpg" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="HeroName">
+            <h2>
+                @Model.name
+
+                @{
+                    if (Model.ComicLists != null)
+                    {
+                        <span class="badge">@Model.ComicLists.ComicSummaries.Count</span>
+
+                    }
+                    else
+                    {
+                        <span class="badge">0</span>
+                    }
+                }
+
+            </h2>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+

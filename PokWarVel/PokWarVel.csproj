@@ -124,17 +124,59 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="infra\SessionUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\animate.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\lightbox.css" />
+    <Content Include="Content\main.css" />
+    <Content Include="Content\prettyPhoto.css" />
+    <Content Include="Content\responsive.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\404-bg.png" />
+    <Content Include="images\404.png" />
+    <Content Include="images\coming-soon-bg.png" />
+    <Content Include="images\coming-soon1.png" />
+    <Content Include="images\coming-soon2.png" />
+    <Content Include="images\coming-soon3.png" />
+    <Content Include="images\coming-soon4.png" />
+    <Content Include="images\contact-bg.png" />
+    <Content Include="images\icon-map.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\player-graphics.gif" />
+    <Content Include="images\w.gif" />
+    <Content Include="js\audio.min.js" />
+    <Content Include="js\audiojs.swf" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\coundown-timer.js" />
+    <Content Include="js\gmaps.js" />
+    <Content Include="js\holder.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\jquery.countTo.js" />
+    <Content Include="js\jquery.fitvids.js" />
+    <Content Include="js\jquery.isotope.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\lightbox.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\masonry.min.js" />
+    <Content Include="js\respond.min.js" />
+    <Content Include="js\wow.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -161,9 +203,20 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_Fiche.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="audio\" />
+    <Folder Include="images\aboutus\" />
+    <Folder Include="images\blogdetails\" />
+    <Folder Include="images\blog\" />
+    <Folder Include="images\home\" />
+    <Folder Include="images\ico\" />
+    <Folder Include="images\lightbox\" />
+    <Folder Include="images\portfolio-details\" />
+    <Folder Include="images\portfolio\" />
+    <Folder Include="images\services\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +226,12 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Mike\Documents\Visual Studio 2015\Projects\WebAppMarvel\MarvelApi\MarvelApi.csproj">
+      <Project>{2b1f6491-8755-483c-ac13-f57f1f8343b7}</Project>
+      <Name>MarvelApi</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
