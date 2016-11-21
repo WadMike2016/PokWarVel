@@ -262,7 +262,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Mike\Documents\Visual Studio 2015\Projects\WebAppMarvel\MarvelApi\MarvelApi.csproj">
+    <ProjectReference Include="..\MarvelApi\MarvelApi.csproj">
       <Project>{2b1f6491-8755-483c-ac13-f57f1f8343b7}</Project>
       <Name>MarvelApi</Name>
     </ProjectReference>
