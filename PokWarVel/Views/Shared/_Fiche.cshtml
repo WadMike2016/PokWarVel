@@ -1,8 +1,8 @@
-﻿@model MarvelApi.Model.Characters
+﻿@model PokWarVel.Models.ResultModel
 <div class="col-xs-6 col-sm-6 col-md-4">
     <div class="Fiche">
         <div class="portfolio-single head">
-            <div class="roundedImage" style="background:url(@Model.ptiAvatar) no-repeat 0px 0px;">
+            <div class="roundedImage" style="background:url(@Model.Avatar) no-repeat 0px 0px;">
                 &nbsp;
             </div>
             <div class="portfolio-view">
@@ -14,18 +14,12 @@
         </div>
         <div class="HeroName">
             <h2>
-                @Model.name
+                @Model.Name
 
                 @{
-                    if (Model.ComicLists != null)
-                    {
-                        <span class="badge">@Model.ComicLists.ComicSummaries.Count</span>
+                    
+                        <span class="badge">@Model.Badge</span>
 
-                    }
-                    else
-                    {
-                        <span class="badge">0</span>
-                    }
                 }
 
             </h2>

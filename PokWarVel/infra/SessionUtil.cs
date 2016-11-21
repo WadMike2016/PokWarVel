@@ -15,5 +15,11 @@ namespace PokWarVel.infra
             get { return (int)HttpContext.Current.Session["offsetGal"]; }
             set { HttpContext.Current.Session["offsetGal"] = value; }
         }
+
+        public static int offsetGalSearch
+        {
+            get { return (int)HttpContext.Current.Session["offsetGalSearch"]; }
+            set { HttpContext.Current.Session["offsetGaloffsetGalSearch"] = value; }
+        }
     }
 }

@@ -34,7 +34,10 @@ namespace PokWarVel.Controllers
             MarvelRequester r = new MarvelRequester();
             List<Characters> info = r.GetCharacters(limit: 12, offset: SessionUtil.offsetGal);
 
-            return View(info);
+
+
+
+            return View(info.Select(s=> Mapper.FromMarvelToLocal(s)).ToList());
         }
 
         public ActionResult About()

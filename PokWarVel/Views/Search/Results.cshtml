@@ -13,18 +13,14 @@
                     <a href="#" class="btn btn-common">SIGN UP</a>
                 </div>
                 <img src="~/images/home/slider/powergirl.png" class="slider-hill" alt="slider image">
-                <img src="~/images/home/slider/bb8.png" width="100" class="slider-house" alt="slider image">
-                <img src="~/images/home/slider/starwars.png"   class="slider-sun" alt="slider image">
-                <img src="~/images/home/slider/pokemon.png" height="120" class="slider-birds1" alt="slider image">
-                <img src="~/images/home/slider/warmachine.png" width="250" class="slider-birds2" alt="slider image">
-            </div>
+               </div>
         </div>
     </div>
     <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
 </section>
 <!--/#home-slider-->
 
-
+<h1> @Model.Count() Result(s) for "@ViewBag.searchword"</h1>
 <section id="projects">
     <div class="container">
         <div class="row">
@@ -38,10 +34,10 @@
                     </ul><!--/#portfolio-filter-->
 
                     <div class="portfolio-items">
-                      @foreach (var item in Model)
-                      {
-                          Html.RenderPartial("~/Views/Shared/_Fiche.cshtml",item);
-                      }
+                        @foreach (var item in Model)
+                        {
+                            Html.RenderPartial("~/Views/Shared/_Fiche.cshtml", item);
+                        }
                     </div>
                     <div class="portfolio-pagination">
                         <ul class="pagination">
@@ -58,7 +54,7 @@
                         <h3>Categories</h3>
                         <ul class="nav navbar-stacked">
                             <li><a href="#">Human<span class="pull-right">(1)</span></a></li>
-                            <li ><a href="#">E.T<span class="pull-right">(8)</span></a></li>
+                            <li><a href="#">E.T<span class="pull-right">(8)</span></a></li>
                             <li><a href="#">Mutan<span class="pull-right">(4)</span></a></li>
                             <li><a href="#">Animal<span class="pull-right">(9)</span></a></li>
                         </ul>
@@ -81,9 +77,9 @@
                                 <h4><a href="#">Luke Skywalker <i class="glyphicon glyphicon-heart"></i> SpiderGirl</p></a></h4>
                             </div>
                         </div>
-                        
+
                     </div>
-                   
+
                 </div>
             </div>
         </div>
