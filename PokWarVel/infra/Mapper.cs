@@ -10,12 +10,17 @@ namespace PokWarVel.infra
 {
     public static class Mapper
     {
-
+        /// <summary>
+        /// Create a neuw ResultModel from a Marvel Character
+        /// </summary>
+        /// <param name="c">The character to use</param>
+        /// <returns>A ResultModel with data from Marvel Character</returns>
         public static ResultModel FromMarvelToLocal(Characters c)
         {
             ResultModel rm = new Models.ResultModel();
             rm.Name = c.name;
             rm.Avatar = c.ptiAvatar;
+            rm.TypeElement = ResultModel.Etype.Marvel;
             if(c.ComicLists!=null)
             {
                 rm.Badge = c.ComicLists.ComicSummaries.Count;

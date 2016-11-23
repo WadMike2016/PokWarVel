@@ -88,7 +88,9 @@ namespace MarvelApi
         /// <param name="SearchString">The search string</param>
         /// <returns></returns>
         /// <exception cref="System.InvalidOperationException">Limit 0 to 100 only</exception>
-        public List<Characters> SearchCharacters(int limit = 1, int offset = 200, string Endpoint = "v1/public/characters", string SearchString="")
+        public List<Characters> SearchCharacters(int limit = 1, 
+            int offset = 200, string Endpoint = "v1/public/characters", 
+            string SearchString="")
         {
             //Marvel accept a maximum of 100 character by requests
             if (limit > 100)

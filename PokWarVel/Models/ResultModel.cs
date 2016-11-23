@@ -8,6 +8,9 @@ namespace PokWarVel.Models
 {
    public class ResultModel
     {
+        /// <summary>
+        /// Enum to define the type of the result
+        /// </summary>
         public enum Etype
         {
             Marvel,
@@ -26,24 +29,48 @@ namespace PokWarVel.Models
             set { _typeElement = value; }
         }
 
+        /// <summary>
+        /// Gets or sets the avatar.
+        /// </summary>
+        /// <value>
+        /// The avatar.
+        /// </value>
         public string Avatar
         {
             get { return _avatar; }
             set { _avatar = value; }
         }
 
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        /// <value>
+        /// The name.
+        /// </value>
         public string Name
         {
             get { return _name; }
             set { _name = value; }
         }
 
+        /// <summary>
+        /// Gets or sets the identifier.
+        /// </summary>
+        /// <value>
+        /// The identifier.
+        /// </value>
         public int ID
         {
             get { return _id; }
             set { _id = value; }
         }
 
+        /// <summary>
+        /// Gets or sets the badge.
+        /// </summary>
+        /// <value>
+        /// The badge.
+        /// </value>
         public int Badge
         {
             get
