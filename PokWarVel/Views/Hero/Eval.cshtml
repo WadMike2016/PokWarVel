@@ -1,0 +1,31 @@
+﻿@model PokWarVel.Models.EvalViewModel
+
+@{
+    ViewBag.Title = "Eval";
+}
+
+<h2>Who is the BOSS ???</h2>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            @{
+                Html.RenderPartial("~/Views/Shared/_Fiche.cshtml", Model.Rm);
+            }
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+            <form method="post">
+                @Html.HiddenFor(l => l.Evm.IdHero)<br />
+
+                @Html.TextBoxFor(l => l.Evm.Eval)
+
+                <input type="submit" class="btn btn-default" />
+            </form>
+        </div>
+        <div class="col-lg-2"></div>
+    </div>
+</div>

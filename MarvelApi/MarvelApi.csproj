@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImageSearch.cs" />
     <Compile Include="MarvelRequester.cs" />
     <Compile Include="Model\CharacterDataContainer.cs" />
     <Compile Include="Model\CharacterDataWrapper.cs" />

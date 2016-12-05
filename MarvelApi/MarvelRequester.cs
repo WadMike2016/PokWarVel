@@ -18,11 +18,11 @@ namespace MarvelApi
         /// <summary>
         /// The public key if necessary
         /// </summary>
-        private static string Key = "0ff03084ac21b47e141e976157955918";
+        private static string Key = "XXXXX";
         /// <summary>
         /// The private key if necessary
         /// </summary>
-        private static string pKey = "509beae229ea216f69a400478cfef76a07f1f40d0ff03084ac21b47e141e976157955918";
+        private static string pKey = "XXXX";
         /// <summary>
         /// The hash to compute 
         /// </summary>
@@ -71,6 +71,43 @@ namespace MarvelApi
                 }
 
          
+                return lc;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public Characters GetCharacter(long id,string Endpoint = "v1/public/characters")
+        {
+            int limit = 1;
+            int offset = 0;
+            
+            //1- Get the time
+            t = DateTime.Now.TimeOfDay;
+            //2- Calculate hash in accordance with marvel documentation
+            hash = Tools.CalculateMD5LikeMarvel(t, pKey).ToLower();
+            //3- Prepare the parameters
+            urlParameters = "/"+id+"?ts=" + t.ToString().Replace(":", "").Replace(".", "") + "&limit=" + limit + "&offset=" + offset + "&apikey=" + Key + "&hash=" + hash;
+
+            //4- Get the json response from marvel API
+            string json = base.Execute(Endpoint, urlParameters);
+            if (json != "")
+            {
+                Characters lc = null;
+                CharacterDataWrapper cd = JsonConvert.DeserializeObject<CharacterDataWrapper>(json);
+
+                if (cd.data != null)
+                {
+                    CharacterDataContainer CDC = cd.data;
+                    if (CDC.results.Count > 0)
+                    {
+                        lc = CDC.results.First();
+                    }
+                }
+
+
                 return lc;
             }
             else

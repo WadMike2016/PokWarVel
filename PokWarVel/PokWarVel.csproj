@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HeroController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
@@ -127,6 +128,8 @@
     </Compile>
     <Compile Include="infra\Mapper.cs" />
     <Compile Include="infra\SessionUtil.cs" />
+    <Compile Include="Models\EvalModel.cs" />
+    <Compile Include="Models\EvalViewModel.cs" />
     <Compile Include="Models\ResultModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -243,6 +246,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Fiche.cshtml" />
     <Content Include="Views\Search\Results.cshtml" />
+    <Content Include="Views\Hero\Eval.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

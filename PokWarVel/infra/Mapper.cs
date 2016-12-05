@@ -18,6 +18,7 @@ namespace PokWarVel.infra
         public static ResultModel FromMarvelToLocal(Characters c)
         {
             ResultModel rm = new Models.ResultModel();
+            rm.ID = c.id;
             rm.Name = c.name;
             rm.Avatar = c.ptiAvatar;
             rm.TypeElement = ResultModel.Etype.Marvel;

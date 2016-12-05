@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PokWarVel.infra;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace PokWarVel.Models
             Starwars,
             Pokemon
         }
-        private int _id;
+        private long _id;
         private string _name;
         private string _avatar;
         private Etype _typeElement;
@@ -59,7 +60,7 @@ namespace PokWarVel.Models
         /// <value>
         /// The identifier.
         /// </value>
-        public int ID
+        public long ID
         {
             get { return _id; }
             set { _id = value; }
@@ -82,6 +83,28 @@ namespace PokWarVel.Models
             {
                 _badge = value;
             }
+        }
+
+
+        public static ResultModel GetOne(long Id, Etype type)
+        {
+            switch (type)
+            {
+                case Etype.Marvel: return GetOneMarvel(Id);
+
+                case Etype.Starwars: return null;
+                   
+                case Etype.Pokemon: return null;
+                   
+                default: return null;
+            }
+        }
+
+        private static ResultModel GetOneMarvel(long id)
+        {
+            MarvelApi.MarvelRequester requester = new MarvelApi.MarvelRequester();
+
+          return Mapper.FromMarvelToLocal(requester.GetCharacter(id));
         }
     }
 }
