@@ -18,11 +18,11 @@ namespace MarvelApi
         /// <summary>
         /// The public key if necessary
         /// </summary>
-        private static string Key = "XXXXX";
+        private static string Key = "XXXXXXX";
         /// <summary>
         /// The private key if necessary
         /// </summary>
-        private static string pKey = "XXXX";
+        private static string pKey = "XXXXX";
         /// <summary>
         /// The hash to compute 
         /// </summary>

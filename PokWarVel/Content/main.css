@@ -2726,7 +2726,18 @@ span.stButton_gradient,
 
 
 /*Fiche superHero*/
+.Fiche_NoBorder
+{
+    
+     padding-top:1px;
+   padding-bottom:1px;
+   margin-bottom:10px;
+   
+}
 
+.Fiche_NoBorder textarea{
+    min-width:80%;
+}
 
 .Fiche
 {

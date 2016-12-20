@@ -40,9 +40,13 @@
                     <div class="portfolio-items">
                       @foreach (var item in Model)
                       {
-                          Html.RenderPartial("~/Views/Shared/_Fiche.cshtml",item);
+                        <div class="col-xs-6 col-sm-6 col-md-4 miniEval">
+                            @{Html.RenderPartial("~/Views/Shared/_Fiche.cshtml", item);
+                            }
+                        </div>
                       }
-                    </div>
+                            
+                        </div>
                     <div class="portfolio-pagination">
                         <ul class="pagination">
                             <li><a href="/Home/Index/?page=prev">left</a></li>

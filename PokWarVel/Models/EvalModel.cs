@@ -16,6 +16,7 @@ namespace PokWarVel.Models
         private Etype typeHero;
         private int eval;
         private DateTime dateEval;
+        private string _EvalMsg;
         #endregion
         #region Properties
         /// <summary>
@@ -110,6 +111,24 @@ namespace PokWarVel.Models
             set
             {
                 dateEval = value;
+            }
+        }
+        /// <summary>
+        /// Gets or sets the comment.
+        /// </summary>
+        /// <value>
+        /// The comment.
+        /// </value>
+        public string EvaMsg
+        {
+            get
+            {
+                return _EvalMsg;
+            }
+
+            set
+            {
+                _EvalMsg = value;
             }
         }
         #endregion

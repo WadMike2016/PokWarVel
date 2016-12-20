@@ -28,7 +28,8 @@ namespace PokWarVel
                     "~/js/bootstrap.min.js",
                     "~/js/lightbox.min.js",
                     "~/js/wow.min.js",
-                    "~/js/main.js"
+                    "~/js/main.js",
+                    "~/js/Custom.js"
                 ));
 
 
@@ -38,7 +39,8 @@ namespace PokWarVel
                       "~/Content/animate.min.css",
                       "~/Content/lightbox.css",
                       "~/Content/main.css",
-                      "~/Content/responsive.css"));
+                      "~/Content/responsive.css",
+                      "~/Content/Site.css"));
         }
     }
 }

@@ -4,7 +4,7 @@
     ViewBag.Title = "Eval";
 }
 
-<h2>Who is the BOSS ???</h2>
+<h2 class="text-center" >Who is the BOSS ???</h2>
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-2"></div>
@@ -15,17 +15,55 @@
         </div>
         <div class="col-lg-2"></div>
     </div>
-    <div class="row">
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-            <form method="post">
-                @Html.HiddenFor(l => l.Evm.IdHero)<br />
+    <form method="post">        
+        <h2 class="text-center" >Laissez une évaluation</h2>
+        <div class="Fiche_NoBorder">
+            <div class="row ">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="stars">
+                        <input class="star star-9" value="9" id="star-9" type="radio" name="Evm.Eval" />
+                        <label class="star star-9" for="star-9"></label>
+                        <input class="star star-8" value="8" id="star-8" type="radio" name="Evm.Eval" />
+                        <label class="star star-8" for="star-8"></label>
+                        <input class="star star-7" value="7" id="star-7" type="radio" name="Evm.Eval" />
+                        <label class="star star-7" for="star-7"></label>
+                        <input class="star star-6" value="6" id="star-6" type="radio" name="Evm.Eval" />
+                        <label class="star star-6" for="star-6"></label>
+                        <input class="star star-5" value="5" id="star-5" type="radio" name="Evm.Eval" />
+                        <label class="star star-5" for="star-5"></label>
+                        <input class="star star-4" value="4" id="star-4" type="radio" name="Evm.Eval" />
+                        <label class="star star-4" for="star-4"></label>
+                        <input class="star star-3" value="3" id="star-3" type="radio" name="Evm.Eval" />
+                        <label class="star star-3" for="star-3"></label>
+                        <input class="star star-2" value="2" id="star-2" type="radio" name="Evm.Eval" />
+                        <label class="star star-2" for="star-2"></label>
+                        <input  class="star star-1" value="1" id="star-1" type="radio" name="Evm.Eval" />
+                        <label class="star star-1" for="star-1"></label>
 
-                @Html.TextBoxFor(l => l.Evm.Eval)
+                    </div>
+                </div>
 
-                <input type="submit" class="btn btn-default" />
-            </form>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8 text-center">
+                    <textarea name="EvaMsg" ></textarea>
+                </div>
+
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8 text-center">
+                    <input type="hidden" name="Evm.IdHero" value="@Model.Rm.ID" />
+                    <button class="btn btn-default">Envoyer</button>
+
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
         </div>
-        <div class="col-lg-2"></div>
-    </div>
+            </form>
+  
 </div>
